@@ -115,7 +115,7 @@ export default function Hero() {
                         className={`text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 leading-snug md:leading-tight ${isDarkMode ? "text-white" : "text-gray-900"
                             }`}
                     >
-                        Hello I'mmmmm <br />
+                        Hello I'm <br />
                         <span
                             className={
                                 isDarkMode ? "text-green-500" : "text-green-600"
