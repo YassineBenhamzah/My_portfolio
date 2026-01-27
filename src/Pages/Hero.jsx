@@ -132,7 +132,7 @@ export default function Hero() {
                     </p>
                     <div className="flex items-center justify-center md:justify-start gap-4">
                         <a
-                            href="/path-to-your-cv.pdf"
+                            href="https://drive.google.com/file/d/18861mx4T1fa2Ap4ngRes3tefjoN5Um9W/view?usp=drive_link"
                             download
                             className={`px-6 py-3 border-2 rounded-full font-medium transition ${isDarkMode
                                     ? "border-green-500 text-green-500 hover:bg-green-500 hover:text-gray-900"
