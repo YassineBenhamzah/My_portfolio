@@ -4,6 +4,7 @@ import elearning from "../images/elearning.png";
 import portfolio from "../images/portfolio.png";
 import agence from "../images/agence.png";
 import newportf from "../images/newportf.png";
+import restaurant from "../images/restaurant.png";
 import { useStateContext } from "../contexts/ContextProvider";
 
 export default function Projects() {
@@ -71,30 +72,16 @@ export default function Projects() {
             id: 5,
             title: "Social Dashboard",
             icon: "📊",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-            color: "from-green-500 to-teal-500",
+            image: restaurant,
             description:
-                "Real-time social media analytics dashboard providing insights into engagement metrics, audience demographics, and content performance. Features interactive charts and customizable reports.",
-            tech: ["React", "D3.js", "Firebase", "Tailwind"],
+                "A modern, high-end restaurant landing page built with React and Tailwind CSS. This project focuses on premium UI/UX, featuring a sophisticated design, responsive layouts, and seamless navigation to showcase a fine-dining digital experience.",
+            tech: ["React", "Tailwind"],
             details:
                 "Processes millions of data points in real-time with beautiful visualizations and exportable reports in multiple formats.",
-            liveUrl: "https://your-old-portfolio.com",
-            codeUrl: "https://github.com/yourusername/old-portfolio",
+            liveUrl: "https://restaurant.yassinebenhamzah.com",
+            codeUrl: "https://github.com/YassineBenhamzah/restaurants_design",
         },
-        {
-            id: 6,
-            title: "Social Dashboard",
-            icon: "📊",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-            color: "from-green-500 to-teal-500",
-            description:
-                "Real-time social media analytics dashboard providing insights into engagement metrics, audience demographics, and content performance. Features interactive charts and customizable reports.",
-            tech: ["React", "D3.js", "Firebase", "Tailwind"],
-            details:
-                "Processes millions of data points in real-time with beautiful visualizations and exportable reports in multiple formats.",
-            liveUrl: "https://your-old-portfolio.com",
-            codeUrl: "https://github.com/yourusername/old-portfolio",
-        },
+        
     ];
 
     const handleCardClick = (id) => {
