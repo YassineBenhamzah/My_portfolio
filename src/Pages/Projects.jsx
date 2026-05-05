@@ -5,6 +5,9 @@ import portfolio from "../images/portfolio.png";
 import agence from "../images/agence.png";
 import newportf from "../images/newportf.png";
 import restaurant from "../images/restaurant.png";
+import kanflowImg from "../images/kanflow.png";
+import retacarImg from "../images/retacar.png";
+import binwithbrainImg from "../images/binwithbrain.jpg";
 import { useStateContext } from "../contexts/ContextProvider";
 
 export default function Projects() {
@@ -70,16 +73,63 @@ export default function Projects() {
         },
         {
             id: 5,
-            title: "Social Dashboard",
-            icon: "📊",
+            title: "Restaurant Design",
+            icon: "🍽️",
             image: restaurant,
             description:
                 "A modern, high-end restaurant landing page built with React and Tailwind CSS. This project focuses on premium UI/UX, featuring a sophisticated design, responsive layouts, and seamless navigation to showcase a fine-dining digital experience.",
             tech: ["React", "Tailwind"],
             details:
-                "Processes millions of data points in real-time with beautiful visualizations and exportable reports in multiple formats.",
+                "A beautifully crafted landing page with sophisticated design, responsive layouts, and seamless navigation for a premium dining experience.",
             liveUrl: "https://restaurant.yassinebenhamzah.com",
             codeUrl: "https://github.com/YassineBenhamzah/restaurants_design",
+        },
+        {
+            id: 6,
+            title: "RetACar",
+            icon: "🚗",
+            image: retacarImg,
+            description:
+                "A full-stack car rental management platform with 3 user roles (Admin, Agent, Customer), featuring analytics dashboards, revenue charts, real-time notifications, smart filters, availability calendar, and auto-generated PDF rental contracts. Dockerized and deployed on Hostinger + Vercel.",
+            tech: ["Laravel 12", "React 18", "MySQL", "Sanctum", "Docker", "Vite"],
+            details:
+                "Three dedicated user interfaces — Admin analytics dashboard with revenue charts, Agent rental management with on-site bookings, Customer browsing with booking, payment, and downloadable contracts.",
+            liveUrl: "https://lnkd.in/d7h2C-Ys",
+            sourceCodes: [
+                { name: "Frontend", url: "https://lnkd.in/e9RGXSft" },
+                { name: "Backend", url: "https://lnkd.in/eJ75fka4" }
+            ],
+        },
+        {
+            id: 7,
+            title: "KanFlow",
+            icon: "📋",
+            image: kanflowImg,
+            description:
+                "A premium Kanban project management tool with real-time collaboration powered by Laravel Echo and Pusher. Features drag-and-drop tasks, subtask checklists with animated progress bars, priority flagging, due dates, and integrated team chat within each task modal.",
+            tech: ["Next.js", "Laravel", "MySQL", "Pusher", "Tailwind CSS", "Framer Motion"],
+            details:
+                "Real-time collaboration with presence tracking, dynamic Kanban boards with fluid drag-and-drop UI, detailed task management with subtask checklists, and a luxury dark-mode aesthetic.",
+            liveUrl: "https://lnkd.in/dGqhPcpU",
+            sourceCodes: [],
+        },
+        {
+            id: 8,
+            title: "Bin with Brain",
+            icon: "🧠",
+            image: binwithbrainImg,
+            description:
+                "An AI-powered enterprise document management system that reads uploaded files automatically. Drop a PDF, PNG, or JPG and the AI extracts text via Tesseract.js OCR. Features tri-axis search across document name, AI-extracted content, and uploader name. Fully containerized with 5 Docker microservices.",
+            tech: ["Next.js", "React 19", "TypeScript", "Laravel 12", "Docker", "Tesseract.js", "MySQL"],
+            details:
+                "Microservices architecture with Laravel API, MySQL, Queue Worker, OCR Engine (Node.js + Tesseract.js with warm worker pool), and Next.js frontend — all orchestrated via Docker Compose.",
+            liveUrl: "#",
+            sourceCodes: [
+                { name: "API", url: "https://github.com/YassineBenhamzah/bin-brain-api" },
+                { name: "Frontend", url: "https://github.com/YassineBenhamzah/bin-brain-frontend" },
+                { name: "Docker", url: "https://github.com/YassineBenhamzah/bin-brain-docker" },
+                { name: "OCR", url: "https://github.com/YassineBenhamzah/bin-brain-ocr" }
+            ],
         },
         
     ];
@@ -192,14 +242,21 @@ export default function Projects() {
                             >
                                 {/* Card Image */}
                                 <div className="relative h-40 sm:h-48 overflow-hidden">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="w-full h-full object-cover"
-                                    />
-                                    <div
-                                        className={`absolute inset-0 bg-gradient-to-t ${project.color} opacity-40`}
-                                    ></div>
+                                    {project.image ? (
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    ) : (
+                                        <div className={`w-full h-full flex items-center justify-center ${
+                                            isDarkMode
+                                                ? "bg-gradient-to-br from-gray-800 to-gray-900"
+                                                : "bg-gradient-to-br from-gray-100 to-gray-200"
+                                        }`}>
+                                            <span className="text-6xl">{project.icon}</span>
+                                        </div>
+                                    )}
                                     <div
                                         className={`absolute top-3 left-3 sm:top-4 sm:left-4 w-12 h-12 sm:w-16 sm:h-16 backdrop-blur-sm rounded-xl flex items-center justify-center text-2xl sm:text-3xl shadow-lg ${
                                             isDarkMode
@@ -341,14 +398,21 @@ export default function Projects() {
                                     >
                                         {/* Project Image */}
                                         <div className="relative h-48 sm:h-56 lg:h-64 rounded-xl overflow-hidden">
-                                            <img
-                                                src={project.image}
-                                                alt={project.title}
-                                                className="w-full h-full object-cover"
-                                            />
-                                            <div
-                                                className={`absolute inset-0 bg-gradient-to-t ${project.color} opacity-30`}
-                                            ></div>
+                                            {project.image ? (
+                                                <img
+                                                    src={project.image}
+                                                    alt={project.title}
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            ) : (
+                                                <div className={`w-full h-full flex items-center justify-center ${
+                                                    isDarkMode
+                                                        ? "bg-gradient-to-br from-gray-800 to-gray-900"
+                                                        : "bg-gradient-to-br from-gray-100 to-gray-200"
+                                                }`}>
+                                                    <span className="text-8xl">{project.icon}</span>
+                                                </div>
+                                            )}
                                         </div>
 
                                         {/* Full Description */}
@@ -430,18 +494,33 @@ export default function Projects() {
                                             >
                                                 Live Demo
                                             </a>
-                                            <a 
-                                                href={project.codeUrl}
-                                                target="_blank" rel="noopener
-                                                noreferrer" className=
-                                                {`flex-1 py-2 border-2 rounded-lg text-xs font-semibold transition-all duration-300 text-center ${
-                                                    isDarkMode
-                                                        ? "border-gray-600 text-gray-300 hover:border-gray-500 hover:bg-gray-700/50"
-                                                        : "border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50"
-                                                }`}
-                                            >
-                                                View Code
-                                            </a>
+                                            {project.codeUrl && project.codeUrl !== "#" && (
+                                                <a 
+                                                    href={project.codeUrl}
+                                                    target="_blank" rel="noopener noreferrer"
+                                                    className={`flex-1 py-2 border-2 rounded-lg text-xs font-semibold transition-all duration-300 text-center ${
+                                                        isDarkMode
+                                                            ? "border-gray-600 text-gray-300 hover:border-gray-500 hover:bg-gray-700/50"
+                                                            : "border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50"
+                                                    }`}
+                                                >
+                                                    View Code
+                                                </a>
+                                            )}
+                                            {project.sourceCodes && project.sourceCodes.map((source, i) => (
+                                                <a 
+                                                    key={i}
+                                                    href={source.url}
+                                                    target="_blank" rel="noopener noreferrer"
+                                                    className={`flex-1 py-2 border-2 rounded-lg text-xs font-semibold transition-all duration-300 text-center ${
+                                                        isDarkMode
+                                                            ? "border-gray-600 text-gray-300 hover:border-gray-500 hover:bg-gray-700/50"
+                                                            : "border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50"
+                                                    }`}
+                                                >
+                                                    {source.name}
+                                                </a>
+                                            ))}
                                         </div>
                                     </div>
                                 ))}
